@@ -1,0 +1,229 @@
+body {
+  background-color: aliceblue;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width:100%;
+}
+
+.j-page-gradient--home {
+  width: 100vw;
+  height: 500px;
+  background-color: steelblue;
+  background-image: linear-gradient(steelblue, lightblue);
+  position:absolute;
+  top: 40%;
+  right: 0%;
+}
+
+.j-page-gradient--swimming {
+  width: 100vw;
+  height: 100vh;
+  background-color: steelblue;
+  background-image: linear-gradient(white, lightblue,steelblue);
+  position:absolute;
+  top: 0%;
+  right: 0%;
+}
+.j-page-gradient--underwater {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  background-image: radial-gradient(steelblue,
+  lightblue, white);
+}
+
+.jaws-fin {
+  width: 10%;
+}
+
+.jaws-fin--big {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  animation: panningleft 20s infinite;
+  position: absolute;
+}
+
+.jaws-fin--small {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  animation: panningright 20s infinite;
+  position: absolute;
+}
+
+@keyframes panningleft {
+  0% {
+    top: 50%;
+    right: -10%;
+  }
+
+  39% {
+    top: 50%;
+    right: 120%;
+  }
+
+  40% {
+    top: 50%;
+    right: 120%;
+  }
+
+  100%{
+    top: 50%;
+    right: 120%;
+  }
+}
+
+@keyframes panningright {
+  0% {
+    top: 30%;
+    left: -20%;
+  }
+
+  29% {
+    top: 30%;
+    left: -20%;
+  }
+
+  30% {
+    top: 30%;
+    left: -20%;
+  }
+
+  100%{
+    top: 30%;
+    left: 150%;
+  }
+}
+
+/* SWIMMING */
+
+.jaws-legs {
+  width: 10%;
+}
+
+.jaws-legs--legs1{
+  position: absolute;
+  top: -1%;
+  right: 75%;
+  width: 20%;
+  animation: bobbing 3s ease infinite;
+}
+
+.jaws-legs--legs2{
+  position: absolute;
+  top: -1%;
+  right: 1%;
+  width: 50%;
+  animation: bobbing 3s ease infinite;
+  animation-delay: 2s;
+}
+
+.jaws-legs--legs3{
+  position: absolute;
+  top: -1%;
+  right: 50%;
+  width: 15%;
+  animation: bobbing 3.1s ease infinite;
+  animation-delay: 1s;
+}
+
+@keyframes bobbing {
+ 0% {
+   top:-5%;
+ }
+ 50% {
+   top: 0%;
+ }
+ 100%{
+   top:-5%;
+ }
+}
+
+
+/* UNDERWATER */
+
+.jaws-shark {
+  width: 10%;
+}
+
+.jaws-shark--attack {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jaws-shark--attack img {
+  width: 0;
+  transform-origin: center;
+  transition: width 1s ease;
+}
+
+.jaws-shark--attacking img {
+  width: 100%;
+  transform-origin: center;
+  transition: width 1s ease;
+}
+
+.jaws-shark--swimming {
+  position: absolute;
+  right: 20%;
+  top: 40%;
+  animation: swimming 5s cubic-bezier(.18,.71,.81,.48) infinite;
+}
+
+.jaws-shark--swimming-away {
+
+}
+
+@keyframes swimming {
+  0% {
+    top: 40%;
+    right: 20%;
+    transform: rotate(0deg);
+  }
+  16.66% {
+    top: 10%;
+    right: 30%;
+    transform: rotate(-16deg);
+  }
+  33.33%{
+    top:10%;
+    right: 60%;
+    /* transform: rotate(-60deg); */
+  }
+  50% {
+    top: 40%;
+    right: 75%;
+    transform: rotate(-150deg);
+  }
+  66.66%{
+    top: 70%;
+    right: 60%;
+    transform: rotate(-200deg);
+  }
+  83.33% {
+    top: 70%;
+    right: 30%;
+    /* transform: rotate(-280deg); */
+  }
+  100%{
+    top: 40%;
+    right: 20%;
+    transform: rotate(-350deg);
+  }
+
+.jaws-blackscreen
+  {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+
+  }
