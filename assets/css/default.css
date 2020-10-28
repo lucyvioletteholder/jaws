@@ -176,7 +176,8 @@ img {
   position: absolute;
   right: 20%;
   top: 40%;
-  animation: swimming 5s cubic-bezier(.18,.71,.81,.48) infinite;
+  animation: swimming 10s cubic-bezier(.18,.71,.81,.48) infinite;
+  transform-origin: center;
 }
 
 .jaws-shark--swimming-away {
@@ -219,11 +220,16 @@ img {
     right: 20%;
     transform: rotate(-350deg);
   }
+}
 
-.jaws-blackscreen
-  {
+.jaws-body-black {
   background-color: black;
   width: 100vw;
   height: 100vh;
+}
 
-  }
+.jaws-body-black a {
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
